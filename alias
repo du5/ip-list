@@ -1,0 +1,4 @@
+# source ./alias
+aggregate(){
+    aggregate6 < $1 > /tmp/ip.list && mv /tmp/ip.list $1
+}
