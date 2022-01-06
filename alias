@@ -2,3 +2,9 @@
 aggregate(){
     aggregate6 < $1 > /tmp/ip.list && mv /tmp/ip.list $1
 }
+allip(){
+    rm -rf all.list && cat *.list > all.list
+    aggregate all.list
+    tr '\n' , <  all.list > /tmp/ip.list
+    mv /tmp/ip.list all.list
+}
